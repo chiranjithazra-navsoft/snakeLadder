@@ -14,24 +14,24 @@ ladders = {}
 
 def getBoardSize():
     global MAX_VAL
-    MAX_VAL = int(input("Enter the size of the board: ").strip())
+    MAX_VAL = int(input("Enter the size of the board: \n").strip())
 
 
 def getPlayerName():
-    noOfPayer = int(input("Enter number of players wants to join: ").strip())
+    noOfPayer = int(input("Enter number of players wants to join: \n").strip())
     players = []
     for i in range(0,noOfPayer):
-        players.append(input("Enter player "+str(i+1)+" : ").strip())
+        players.append(input("Enter player "+str(i+1)+" : \n").strip())
 
     return players
 
 
 def getSnakeMoves():
-    checkConfirmation = input("Do you want to enter snake moves(Y/N): ").strip()
+    checkConfirmation = input("Do you want to enter snake moves(Y/N): \n").strip()
     global snakes
     if checkConfirmation.upper() == "Y":
-        noOfMoves = int(input("Enter number of moves: ").strip())
-        print("\n Enter "+ str(noOfMoves) +" moves (Eg. 14 4 : any player at 14 will come down to 4)")
+        noOfMoves = int(input("Enter number of moves: \n").strip())
+        print("Enter "+ str(noOfMoves) +" moves (Eg. 14 4 : any player at 14 will come down to 4)")
         for i in range(0,noOfMoves):
             inpData = input().strip()
             inpArr = inpData.split()
@@ -50,11 +50,11 @@ def getSnakeMoves():
         }
 
 def getLadderMoves():
-    checkConfirmation = input("Do you want to enter ladder moves(Y/N): ").strip()
+    checkConfirmation = input("Do you want to enter ladder moves(Y/N): \n").strip()
     global ladders
     if checkConfirmation.upper() == "Y":
-        noOfMoves = int(input("Enter number of moves: ").strip())
-        print("\n Enter "+ str(noOfMoves) +" moves (Eg. 4 14 : any player at 4 will goes up to 14)")
+        noOfMoves = int(input("Enter number of moves: \n").strip())
+        print("Enter "+ str(noOfMoves) +" moves (Eg. 4 14 : any player at 4 will goes up to 14)")
         for i in range(0,noOfMoves):
             inpData = input().strip()
             inpArr = inpData.split()
