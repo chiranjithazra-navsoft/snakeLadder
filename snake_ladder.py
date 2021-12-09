@@ -106,6 +106,7 @@ def checkWin(player_name, position):
 
 
 def startGame():
+    print("\033[1mConfiguration with snake and system randomly selected CROOKED dice:\033[0m\n")
     getBoardSize()
     time.sleep(SLEEP_BETWEEN_ACTIONS)
     players = getPlayerName()
