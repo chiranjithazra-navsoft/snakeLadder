@@ -5,19 +5,23 @@ import random
 import sys
 
 SLEEP_BETWEEN_ACTIONS = 1
-MAX_VAL = 100
+MAX_VAL = 0
 DICE_FACE = 6
 snakes = {}
 
 ladders = {}
 
 
+def getBoardSize():
+    global MAX_VAL
+    MAX_VAL = int(input("Enter the size of the board: ").strip())
+
 
 def getPlayerName():
     noOfPayer = int(input("Enter number of players wants to join: ").strip())
     players = []
     for i in range(0,noOfPayer):
-        players.append(input("Please enter a valid name for first player: ").strip())
+        players.append(input("Enter player "+str(i+1)+" : ").strip())
 
     return players
 
@@ -102,6 +106,7 @@ def checkWin(player_name, position):
 
 
 def startGame():
+    getBoardSize()
     time.sleep(SLEEP_BETWEEN_ACTIONS)
     players = getPlayerName()
     playersValue = []
